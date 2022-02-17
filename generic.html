@@ -1,5 +1,9 @@
 <!DOCTYPE HTML>
-
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
 	<head>
 		<title>Generic - Hyperspace by HTML5 UP</title>
@@ -7,6 +11,19 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link href="https://vjs.zencdn.net/7.17.0/video-js.css" rel="stylesheet" />
+	  <!-- In the head of your document with your other CSS includes... -->
+<!-- Video.js base CSS -->
+<link
+href="https://unpkg.com/video.js@7/dist/video-js.min.css"
+rel="stylesheet"
+/>
+
+<!-- City -->
+<link
+href="https://unpkg.com/@videojs/themes@1/dist/city/index.css"
+rel="stylesheet"
+/>
 	</head>
 	<body class="is-preload">
 
@@ -23,25 +40,19 @@
 			</header>
 
 		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Main -->
-					<section id="main" class="wrapper">
-						<div class="inner">
-							<h1 class="major">A Generic Page</h1>
-							<span class="image fit"><img src="images/pic04.jpg" alt="" /></span>
-							<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique.</p>
-							<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
-						</div>
-					</section>
-
-			</div>
+		<video id="example_video_1" class="video-js vjs-theme-city"
+  controls preload="auto" width="640" height="264"
+  poster="http://video-js.zencoder.com/oceans-clip.png"
+  data-setup='{"example_option":true}'>
+ <source src="pexels-taryn-elliott-5309381.mp4" type='video/mp4' />
+ 
+</video>
 
 		<!-- Footer -->
 			<footer id="footer" class="wrapper alt">
 				<div class="inner">
 					<ul class="menu">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://google.com">Engineerxp</a></li>
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="#">engineerxp</a></li>
 					</ul>
 				</div>
 			</footer>
@@ -54,6 +65,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="https://vjs.zencdn.net/7.17.0/video.min.js"></script>
 
 	</body>
 </html>
