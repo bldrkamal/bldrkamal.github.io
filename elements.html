@@ -6,11 +6,12 @@
 -->
 <html>
 	<head>
-		<title>Blog</title>
+		<title>Geotech</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tensorflow/1.3.2/tf.min.js"></script>
 		 <script async src="https://www.googletagmanager.com/gtag/js?id=G-329LRWQ59V"></script>
                 <script>
                  window.dataLayer = window.dataLayer || [];
@@ -31,6 +32,59 @@
 					</ul>
 				</nav>
 			</header>
+		<div class="card">
+				<div class="card-body">
+					<h2 class="card-title">Proctor test</h2>
+						<br>
+					<form>
+						
+						<label>Plastic limit:</label>
+						<input type="text" id="temperature" placeholder="Enter soil PL data ...">
+						<label>Liquid limit:</label>
+	
+						<input type="text" id="temperature" placeholder="Enter soil LL ...">
+						<label>shrinkage:</label>
+						
+						<input type="text" id="temperature" placeholder="Enter soil SL ...">
+						<label>particle size distribution:</label>
+						<input type="text" id="temperature" placeholder="Enter soil PSD...">
+						<button type="button" id="predict">Predict</button>
+						<h3>Maximum dry density: <b><span id="result"></span></b></h3>
+						<h3>optimum moisture content: <b> <span id="result"></span></b></h3>
+					</form>
+					<p class="card-text"></p>
+				</div>
+			</div>
+				
+				<script>
+					theta_0 = 25;
+					theta_1 = 1.25;
+			 
+					function hypothesis(x) {
+						h = tf.add(tf.mul(x, theta_1), theta_0);
+						return h;
+					}
+			 
+					document.getElementById("predict").onclick = function() {
+						x = parseInt(document.getElementById("temperature").value);
+						h = tf.round(hypothesis(x));
+						document.getElementById("result").innerHTML = h.dataSync();
+					};
+				</script>
+				
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Engineerxp. All rights reserved.</li><li>Design: <a href="#">kamal samaila</a></li>
+					</ul>
+				</div>
+			</footer>
+		
+		
 
 		
 
