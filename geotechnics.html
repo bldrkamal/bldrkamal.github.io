@@ -50,7 +50,7 @@
 						<input type="text" id="temperature" placeholder="Enter soil PSD...">
 						<button type="button" id="predict">Predict</button>
 						<h3>Maximum dry density: <b><span id="result"></span></b></h3>
-						<h3>optimum moisture content: <b> <span id="result"></span></b></h3>
+						<h3>optimum moisture content: <b> <span id="res"></span></b></h3>
 					</form>
 					<p class="card-text"></p>
 				</div>
@@ -69,6 +69,7 @@
 						x = parseInt(document.getElementById("temperature").value);
 						h = tf.round(hypothesis(x));
 						document.getElementById("result").innerHTML = h.dataSync();
+						document.getElementById("res").innerHTML = h.dataSync();
 					};
 				</script>
 				
